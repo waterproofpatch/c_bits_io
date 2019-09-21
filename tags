@@ -1,0 +1,15 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+_GET_NUM_BITS_SET_DWORD_H_	get_num_bits_set_dword.h	/^#define _GET_NUM_BITS_SET_DWORD_H_$/;"	d
+_TEST_DATA_H_	test_data.h	/^#define _TEST_DATA_H_$/;"	d
+bits_set	test_data.h	/^    unsigned char bits_set;$/;"	m	struct:__anon1
+get_num_bits_set_dword	get_num_bits_set_dword.c	/^unsigned char get_num_bits_set_dword(unsigned int dword)$/;"	f
+main	main.c	/^int main(int argc, char** argv)$/;"	f
+num_entries	test_data.c	/^unsigned int num_entries = sizeof(test_entries) \/ sizeof(test_entries[0]);/;"	v
+test_data	test_data.h	/^    unsigned int  test_data;$/;"	m	struct:__anon1
+test_entries	test_data.c	/^test_entry_t test_entries[] = {$/;"	v
+test_entry_t	test_data.h	/^} test_entry_t;$/;"	t	typeref:struct:__anon1
