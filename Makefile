@@ -1,5 +1,9 @@
+SRC_DIR=src
+BIN_DIR=bin
+PROG_NAME=c_num_bits_set
 all:
-	gcc *.c
+	mkdir -p $(BIN_DIR)
+	gcc $(SRC_DIR)/*.c -o $(BIN_DIR)/$(PROG_NAME)
 
 run:
-	./a.out
+	./$(BIN_DIR)/$(PROG_NAME)
