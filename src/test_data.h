@@ -7,4 +7,10 @@ typedef struct
     unsigned int  test_data;
 } test_entry_t;
 
+typedef struct
+{
+    unsigned char      bits_set;
+    unsigned long long test_data;
+} test_entry_64bit_t;
+
 #endif
