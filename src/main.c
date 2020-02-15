@@ -1,13 +1,14 @@
 /**
- * Get the number of bits set in a 32 bit unsigned integer.
+ * @author waterproofpatch
+ * @brief get the number of bits set in a 32 bit unsigned integer.
  * */
-#include <stdio.h>
-#include <assert.h>
+#include <stdio.h>  /* printf */
+#include <assert.h> /* assert */
 
-#include "test_data.h"
-#include "get_num_bits_set.h"
+#include "test_data.h"        /* test_entry_t */
+#include "get_num_bits_set.h" /* get_num_bits_set */
 
-// defined in test_data.c
+/* defined in test_data.c */
 extern unsigned int       num_entries;
 extern unsigned int       num_entries_64;
 extern test_entry_t       test_entries[];
@@ -15,6 +16,9 @@ extern test_entry_64bit_t test_entries_64bit[];
 
 int main(int argc, char** argv)
 {
+    /* assume 32 bit integers, 64 bit double-wide integers (long long)
+     * may not be reasonable on all systems
+     */
     assert(sizeof(test_entries[0].test_data) == 4);
     assert(sizeof(test_entries_64bit[0].test_data) == 8);
 

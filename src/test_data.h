@@ -1,3 +1,8 @@
+/**
+ * @author waterproofpatch
+ * @brief test data struct defs
+ */
+
 #ifndef _TEST_DATA_H_
 #define _TEST_DATA_H_
 
