@@ -7,3 +7,6 @@ all:
 
 run:
 	./$(BIN_DIR)/$(PROG_NAME)
+
+clean:
+	rm -rf $(BIN_DIR)
