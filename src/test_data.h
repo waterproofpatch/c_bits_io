@@ -8,8 +8,8 @@
 
 typedef struct
 {
-    unsigned char bits_set;
-    unsigned int  test_data;
+    unsigned char bits_set;  /** hold number of bits set */
+    unsigned int  test_data; /** value for test */
 } test_entry_t;
 
 typedef struct
