@@ -10,12 +10,12 @@
  */
 static unsigned char get_num_bits_set_byte(unsigned char byte);
 
-unsigned char get_num_bits_set(void* data, size_t len_bytes)
+unsigned char get_num_bits_set(void *data, size_t len_bytes)
 {
     unsigned char num_bits_set = 0;
     for (size_t i = 0; i < len_bytes; i++)
     {
-        unsigned char data_char = *((unsigned char*)data + i);
+        unsigned char data_char = *((unsigned char *)data + i);
         num_bits_set += get_num_bits_set_byte(data_char);
     }
     return num_bits_set;

@@ -1,7 +1,7 @@
 /**
  * @author waterproofpatch
  * @brief get the number of bits set in a 32 bit unsigned integer.
- * */
+ */
 #include <stdio.h>  /* printf */
 #include <assert.h> /* assert */
 
@@ -14,7 +14,7 @@ extern unsigned int       num_entries_64;
 extern test_entry_t       test_entries[];
 extern test_entry_64bit_t test_entries_64bit[];
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     /* assume 32 bit integers, 64 bit double-wide integers (long long)
      * may not be reasonable on all systems
@@ -30,7 +30,7 @@ int main(int argc, char** argv)
 
         // call our utility function
         unsigned char calculatd_bits_set =
-            get_num_bits_set((void*)&test_dword, sizeof(unsigned int));
+            get_num_bits_set((void *)&test_dword, sizeof(unsigned int));
         printf("dword: 0x%08x, calculated: %d, actual: %d\n", test_dword,
                calculatd_bits_set, num_bits_set);
 
@@ -46,7 +46,7 @@ int main(int argc, char** argv)
 
         // call our utility function
         unsigned char calculatd_bits_set =
-            get_num_bits_set((void*)&test_dword, sizeof(unsigned long long));
+            get_num_bits_set((void *)&test_dword, sizeof(unsigned long long));
         printf("dword: 0x%llx, calculated: %d, actual: %d\n", test_dword,
                calculatd_bits_set, num_bits_set);
 
