@@ -10,8 +10,8 @@ Utility to determine the number of bits set in various data types.
 make
 ```
 
-## Usage
+## Run
 
 ```bash
-./a.out
+make run
 ```
