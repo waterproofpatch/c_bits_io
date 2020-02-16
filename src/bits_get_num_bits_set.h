@@ -1,9 +1,9 @@
 /**
  * @author waterproofpatch
- * @brief prototype for get_num_bits_set
+ * @brief prototype for bits_get_num_bits_set
  */
-#ifndef _GET_NUM_BITS_SET_H_
-#define _GET_NUM_BITS_SET_H_
+#ifndef _BITS_GET_NUM_BITS_SET_H_
+#define _BITS_GET_NUM_BITS_SET_H_
 
 #include <stddef.h>
 
@@ -15,6 +15,6 @@
  *
  * @return: unsigned char number of bits set in this data
  */
-unsigned char get_num_bits_set(void* data, size_t len_bytes);
+unsigned char bits_get_num_bits_set(void *data, size_t len_bytes);
 
-#endif
+#endif /* _BITS_GET_NUM_BITS_SET_H_ */

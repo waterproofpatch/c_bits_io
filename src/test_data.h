@@ -18,4 +18,4 @@ typedef struct
     unsigned long long test_data;
 } test_entry_64bit_t;
 
-#endif
+#endif /* _TEST_DATA_H_ */
