@@ -34,7 +34,6 @@ static void bits_print_byte(unsigned char byte)
     /* for each bit in a byte */
     for (unsigned int i = 0; i < sizeof(unsigned char) * 8; i++)
     {
-        /* printf("%i", (byte >> i) & 1); */
         if ((byte & (1 << i)))
         {
             printf("1");
