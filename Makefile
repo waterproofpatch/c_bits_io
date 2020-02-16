@@ -4,16 +4,17 @@ LIB_NAME=bits_io
 PROG_NAME=main
 INCLUDES=src/bits_io
 
-all: main
+all: dir main
 
 dir:
 	mkdir -p $(BIN_DIR)
 
-lib: dir
-	gcc -c -Wall -Werror $(SRC_DIR)/$(LIB_NAME)/*.c 
+lib: $(SRC_DIR)/$(LIB_NAME)/*.c
+	# gcc -c -Wall -Werror $(SRC_DIR)/$(LIB_NAME)/*.c 
+	gcc -c -Wall -Werror $^
 
-main: dir lib
-	gcc -c -I$(INCLUDES) -Wall $(SRC_DIR)/*.c 
+main: lib 
+	gcc -c -Wall -Werror -I$(INCLUDES) -Wall $(SRC_DIR)/*.c 
 	gcc *.o -o $(BIN_DIR)/$(PROG_NAME)
 
 run:
