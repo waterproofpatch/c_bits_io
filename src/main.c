@@ -40,6 +40,7 @@ static void test_bits_print()
     printf("Testing bits print only\n");
     unsigned char  a;
     unsigned short b;
+
     /* chars */
     a = 0x0f;
     bits_print(&a, sizeof(unsigned char));
