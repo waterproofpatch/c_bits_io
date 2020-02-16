@@ -1,5 +1,13 @@
-*.out
+# editor configuration files
 .vscode/c_cpp_properties.json
 c_num_bits_set.code-workspace
 tags
+
+# binary output folder
 bin
+
+# binary output
+*.o
+*.a
+*.so
+

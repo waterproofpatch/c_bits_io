@@ -1,12 +1,23 @@
 SRC_DIR=src
 BIN_DIR=bin
-PROG_NAME=c_num_bits_set
-all:
+LIB_NAME=bits_io
+PROG_NAME=main
+INCLUDES=src/bits_io
+
+all: main
+
+dir:
 	mkdir -p $(BIN_DIR)
-	gcc $(SRC_DIR)/*.c -o $(BIN_DIR)/$(PROG_NAME)
+
+lib: dir
+	gcc -c -Wall -Werror $(SRC_DIR)/$(LIB_NAME)/*.c 
+
+main: dir lib
+	gcc -c -I$(INCLUDES) -Wall $(SRC_DIR)/*.c 
+	gcc *.o -o $(BIN_DIR)/$(PROG_NAME)
 
 run:
 	./$(BIN_DIR)/$(PROG_NAME)
 
 clean:
-	rm -rf $(BIN_DIR)
+	rm -rf $(BIN_DIR) *.o *.a *.so
