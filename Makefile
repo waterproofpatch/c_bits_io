@@ -17,7 +17,7 @@ main: lib
 	gcc -c -Wall -Werror -I$(INCLUDES) -Wall $(SRC_DIR)/*.c 
 	gcc *.o -o $(BIN_DIR)/$(PROG_NAME)
 
-run:
+run: all
 	./$(BIN_DIR)/$(PROG_NAME)
 
 clean:
